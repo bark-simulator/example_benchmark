@@ -16,13 +16,20 @@ def example_benchmark_dependencies():
         remote = "https://github.com/bark-simulator/planner-rules-mcts.git",
     )
 
+    # _maybe(
+    #     git_repository,
+    #     name = "bark_project",
+    #     commit = "4e33a66ec5dc6a936a71cad1bc0db1807a9b7cb6",
+    #     remote = "https://github.com/bark-simulator/bark.git",
+    # )
+
     _maybe(
         git_repository,
         name = "bark_project",
-        commit = "4e33a66ec5dc6a936a71cad1bc0db1807a9b7cb6",
+        branch = "master",
         remote = "https://github.com/bark-simulator/bark.git",
     )
-
+    
 def _maybe(repo_rule, name, **kwargs):
     if name not in native.existing_rules():
         repo_rule(name = name, **kwargs)
