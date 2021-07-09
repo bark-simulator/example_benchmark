@@ -1,0 +1,48 @@
+{
+    "Visualization": {
+        "Agents": {
+            "Color": {
+                "Other": {
+                    "Lines": "Color of other agents",
+                    "Face": "Color of other agents"
+                },
+                "Controlled": {
+                    "Lines": "Color of controlled, evaluated agents",
+                    "Face": "Color of controlled, evaluated agents"
+                },
+                "UseColormapForOtherAgents": "Flag to enable color map for other agents",
+                "IfColormapUseLineColorOthers": "Flag to enable that line color can be fixed for other agents while using colormap"
+            },
+            "Alpha": {
+                "Controlled": "Alpha of evalagents",
+                "Other": "Alpha of other agents"
+            },
+            "ColorRoute": "Color of agents routes",
+            "DrawRoute": "Draw Route of each agent",
+            "DrawAgentId": "Draw id of each agent",
+            "DrawBehaviorPlanEvalAgent": "Draw behavior plan of evalauted agent",
+            "DrawEvalGoals": "Draw Route of eval agent goals",
+            "EvalGoalColor": "Color of eval agent goals",
+            "DrawHistory": "Draw history with alpha trace for each agent",
+            "DrawHistoryDrawFace": "Flag to specify if face is drawn in history mode"
+        },
+        "Map": {
+            "XodrLanes": {
+                "Boundaries": {
+                    "Color": "Color of agents except ego vehicle",
+                    "Alpha": "Color of agents except ego vehicle",
+                    "Linewidth": "Linewidth of linestrings"
+                }
+            },
+            "Plane": {
+                "Color": "Color of the background plane",
+                "Alpha": "Alpha of the background plane"
+            }
+        },
+        "Evaluation": {
+            "DrawLTLDebugInfo": "Flag to specify if debug info to ltl evaluators shall be plotted",
+            "DrawRssDebugInfo": "Flag to specify if debug info to rss evaluators shall be plotted",
+            "DrawRssSafetyResponses": "Flag to specify if visualizating rss safety responses."
+        }
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "BehaviorRulesMcts": {
+      "MultiAgent": false,
+      "MaxNumIterations": 5000,
+      "RewardVectorSize": 1,
+      "CooperationFactor": 0.0,
+      "ReturnLowerBound": [
+        -1000.0
+      ],
+      "ReturnUpperBound": [
+        0.0
+      ],
+      "Threshold": [
+        1000000.0
+      ],
+      "UCTExplorationConstant": [1.41],
+      "Rules": {
+        "common": [
+          {
+            "formula": "G !collision_ego",
+            "weight": 0.0,
+            "priority": 0
+          }
+        ]
+      },
+      "Labels": [],
+      "PredictionSettings": {
+        "DefaultModelName": "BehaviorMobilRuleBased",
+        "DefaultModelParams": {
+          "BehaviorMobilRuleBased": {
+            "AThr": 0.2,
+            "Politeness": 0.0,
+            "SafeDeceleration": 12.0
+          },
+          "BehaviorLaneChangeRuleBased": {
+            "MinRemainingLaneCorridorDistance": 80.0,
+            "MinVehicleRearDistance": 0.5,
+            "MinVehicleFrontDistance": 1.0,
+            "TimeKeepingGap": 0.5
+          },
+          "BehaviorIDMClassic": {
+            "MinimumSpacing": 2.0,
+            "DesiredTimeHeadway": 1.5,
+            "MaxAcceleration": 1.7000000476837158,
+            "AccelerationLowerBound": -8.0,
+            "AccelerationUpperBound": 4.0,
+            "DesiredVelocity": 10.0,
+            "ComfortableBrakingAcceleration": 2.0,
+            "MinVelocity": 0.0,
+            "MaxVelocity": 50.0,
+            "Exponent": 4,
+            "BrakeForLaneEnd": true,
+            "BrakeForLaneEndEnabledDistance": 60.0,
+            "BrakeForLaneEndDistanceOffset": 25.0,
+            "NumTrajectoryTimePoints": 11,
+            "CoolnessFactor": 0.0
+          },
+          "BehaviorIDMLaneTracking": {
+            "CrosstrackErrorGain": 2.5
+          }
+        }
+      },
+      "StateParameters": {
+        "CollisionWeight": -400.0,
+        "OutOfMapWeight": -400.0,
+        "PotentialWeight": 32.0,
+        "AccelerationWeight": -0.5,
+        "RadialAccelerationWeight": 0.0,
+        "DesiredVelocityWeight": -5.0,
+        "LaneCenterDeviationWeight": 0.0,
+        "UseRuleRewardForEgoOnly": false
+      }
+    }
+  }

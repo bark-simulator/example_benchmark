@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+  schedule:
+  - cron: "0 2 * * *"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    container:
+      image: docker://barksim/bark:latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setting up virtual environment
+        run: virtualenv -p python3 ./tools/python/venv  --system-site-packages
+      - name: Getting into venv
+        run: . ./tools/python/venv/bin/activate
+      - name: Runing merging_test_specific
+        run: bazel test //src/run:merging_test_specific

@@ -1,0 +1,104 @@
+{
+    "BehaviorRulesMcts": {
+      "MultiAgent": false,
+      "MaxNumIterations": 5000,
+      "RewardVectorSize": 3,
+      "CooperationFactor": 0.0,
+      "ReturnLowerBound": [
+        -1.0,
+        -1.0,
+        -1000.0
+      ],
+      "ReturnUpperBound": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Threshold": [
+        -0.19,
+        -0.3,
+        1000000.0
+      ],
+      "UCTExplorationConstant": [
+        1.41,
+        1.41,
+        1.41
+      ],
+      "Rules": {
+        "common": [
+          {
+            "formula": "G !collision_ego",
+            "weight": 0.0,
+            "priority": 0
+          },
+          {
+            "formula": "G sd_front",
+            "weight": -1.0,
+            "priority": 1
+          }
+        ]
+      },
+      "Labels": [
+        {
+          "type": "SafeDistanceLabelFunction",
+          "label_str": "sd_front",
+          "to_rear": false,
+          "delta_ego": 1.0,
+          "delta_others": 1.0,
+          "a_e": -7.84,
+          "a_o": -7.84,
+          "consider_crossing_corridors": true,
+          "max_agents_for_crossing": 4,
+          "use_frac_param_from_world": false,
+          "lateral_difference_threshold": 2.0,
+          "check_lateral_dist": false
+        }
+      ],
+      "StateParameters": {
+        "CollisionWeight": -1.0,
+        "OutOfMapWeight": -1.0,
+        "PotentialWeight": 32.0,
+        "AccelerationWeight": -0.5,
+        "RadialAccelerationWeight": 0.0,
+        "DesiredVelocityWeight": -5.0,
+        "LaneCenterDeviationWeight": 0.0,
+        "UseRuleRewardForEgoOnly": false
+      },
+      "PredictionSettings": {
+        "DefaultModelName": "BehaviorMobilRuleBased",
+        "DefaultModelParams": {
+          "BehaviorMobilRuleBased": {
+            "AThr": 0.2,
+            "Politeness": 0.0,
+            "SafeDeceleration": 12.0
+          },
+          "BehaviorLaneChangeRuleBased": {
+            "MinRemainingLaneCorridorDistance": 80.0,
+            "MinVehicleRearDistance": 0.5,
+            "MinVehicleFrontDistance": 1.0,
+            "TimeKeepingGap": 0.5
+          },
+          "BehaviorIDMClassic": {
+            "MinimumSpacing": 2.0,
+            "DesiredTimeHeadway": 1.5,
+            "MaxAcceleration": 1.7000000476837158,
+            "AccelerationLowerBound": -8.0,
+            "AccelerationUpperBound": 4.0,
+            "DesiredVelocity": 10.0,
+            "ComfortableBrakingAcceleration": 2.0,
+            "MinVelocity": 0.0,
+            "MaxVelocity": 50.0,
+            "Exponent": 4,
+            "BrakeForLaneEnd": true,
+            "BrakeForLaneEndEnabledDistance": 60.0,
+            "BrakeForLaneEndDistanceOffset": 25.0,
+            "NumTrajectoryTimePoints": 11,
+            "CoolnessFactor": 0.0
+          },
+          "BehaviorIDMLaneTracking": {
+            "CrosstrackErrorGain": 2.5
+          }
+        }
+      }
+    }
+  }

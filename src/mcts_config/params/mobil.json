@@ -1,0 +1,39 @@
+{
+  "BehaviorIDMClassic": {
+    "MinimumSpacing": 2.0,
+    "DesiredTimeHeadway": 1.5,
+    "MaxAcceleration": 1.7000000476837158,
+    "AccelerationLowerBound": -8.0,
+    "AccelerationUpperBound": 4.0,
+    "DesiredVelocity": 10.0,
+    "ComfortableBrakingAcceleration": 2.0,
+    "MinVelocity": 0.0,
+    "MaxVelocity": 50.0,
+    "Exponent": 4,
+    "BrakeForLaneEnd": true,
+    "BrakeForLaneEndEnabledDistance": 60.0,
+    "BrakeForLaneEndDistanceOffset": 25.0,
+    "NumTrajectoryTimePoints": 11,
+    "CoolnessFactor": 0.0
+  },
+  "BehaviorIDMLaneTracking": {
+    "CrosstrackErrorGain": 2.5
+  },
+  "BehaviorLaneChangeRuleBased": {
+    "MinRemainingLaneCorridorDistance": 80.0,
+    "MinVehicleRearDistance": 0.5,
+    "MinVehicleFrontDistance": 1.0,
+    "TimeKeepingGap": 0.5
+  },
+  "BehaviorMobilRuleBased": {
+    "AThr": 0.2,
+    "Politeness": 0.0,
+    "SafeDeceleration": 12.0
+  },
+  "DynamicModel": {
+    "LatAccLeftMax": 4.0,
+    "LatAccRightMax": 4.0,
+    "LonAccelerationMax": 4.0,
+    "LonAccelerationMin": -8.0
+  }
+}

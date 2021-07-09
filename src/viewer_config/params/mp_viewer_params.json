@@ -1,0 +1,84 @@
+{
+    "Visualization": {
+        "Agents": {
+            "Color": {
+                "Other": {
+                    "Lines": [
+                        0.1,
+                        0.1,
+                        0.1
+                    ],
+                    "Face": [
+                        0.7,
+                        0.7,
+                        0.7
+                    ]
+                },
+                "Controlled": {
+                    "Lines": [
+                        0.1,
+                        0.1,
+                        0.1
+                    ],
+                    "Face": [
+                        0.9,
+                        0,
+                        0
+                    ]
+                },
+                "UseColormapForOtherAgents": true,
+                "IfColormapUseLineColorOthers": true
+            },
+            "Alpha": {
+                "Controlled": 0.8,
+                "Other": 0.8
+            },
+            "ColorRoute": [
+                0.2,
+                0.2,
+                0.2
+            ],
+            "DrawRoute": false,
+            "DrawAgentId": true,
+            "DrawInvalidAgents": true,
+            "DrawBehaviorPlanEvalAgent": true,
+            "DrawOrientationArrow": false,
+            "DrawEvalGoals": false,
+            "EvalGoalColor": [
+                0.49,
+                0.63,
+                0.83
+            ],
+            "DrawHistory": true,
+            "DrawHistoryDrawFace": false
+        },
+        "Map": {
+            "XodrLanes": {
+                "Boundaries": {
+                    "Color": [
+                        0.7,
+                        0.7,
+                        0.7
+                    ],
+                    "Alpha": 1.0,
+                    "Linewidth": 1.0
+                }
+            },
+            "Plane": {
+                "Color": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "Alpha": 1.0
+            },
+            "DrawAerialImage": true
+        },
+        "Evaluation": {
+            "DrawLTLDebugInfo": false,
+            "DrawRssDebugInfo": false,
+            "DrawRssSafetyResponses": false
+        }
+    }
+}
