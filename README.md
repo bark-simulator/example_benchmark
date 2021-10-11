@@ -35,6 +35,15 @@ Evaluators can be used as a metric to analyze the benchmark, but also as a termi
 ### Scenarios:
 The scenarios are generated based on the config files in `src/database/scenario_sets`. 
 
+### Behavior Models
+This example repository uses the MCTS with Rules as a sophisticated behavior model.
+However, the miqp-based game-theoretic behavior model MINIVAN is also available. For this, you need to install CPLEX first, see [instructions](https://github.com/bark-simulator/planner-miqp/blob/master/README.md). 
+To use this behavior model here, follow the following steps:
+1. Comment in the planner_miqp repository in the deps.bzl file.
+2. Load the planner_miqp_dependencies in the WORKSPACE file.
+3. Activate the additional build of the behavior model and provide the path to the cplex library via `--define planner_miqp=true  --test_env LD_LIBRARY_PATH=/opt/ibm/ILOG/CPLEX_Studio1210/opl/bin/x86-64_linux`. 
+4. Provide the following cplex model path via the parameter server to the behavior model `params_miqp["Miqp"]["CplexModelPath"] = "../planner_miqp/cplexmodel/"`. Provide this parameter server to the behavior model.
+
 ## Dependency Management using Bazel
 As you can see in the [bark-simulator Github Group](https://github.com/bark-simulator/), the BARK ecosystem is split over multiple Github repositories. One reason for this was to keep the core functionalities light-weight and reasonably fast to build. Specifically, a lot of planning modules are placed in seperate repositories. Using Bazel as our build environment enables the reproducibility of our experiments, as dependency versions of the repositories can be tracked easily.
 

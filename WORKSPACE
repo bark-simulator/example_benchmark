@@ -31,5 +31,8 @@ rule_monitor_dependencies()
 load("@planner_rules_mcts//util:deps.bzl", "planner_rules_mcts_dependencies")
 planner_rules_mcts_dependencies()
 
+# load("@planner_miqp//util:deps.bzl", "planner_miqp_dependencies")
+# planner_miqp_dependencies()
+
 load("@pybind11_bazel//:python_configure.bzl", "python_configure")
 python_configure(name = "local_config_python") 

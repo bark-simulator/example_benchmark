@@ -18,8 +18,15 @@ def example_benchmark_dependencies():
 
     # _maybe(
     #     git_repository,
+    #     name = "planner_miqp",
+    #     commit="cea69161e7763af59d76bad87d8b4d6e4d0d1a8c",
+    #     remote = "https://github.com/bark-simulator/planner-miqp"
+    # )
+
+    # _maybe(
+    #     git_repository,
     #     name = "bark_project",
-    #     commit = "4e33a66ec5dc6a936a71cad1bc0db1807a9b7cb6",
+    #     commit = "9bf1dffa575be132734a823368de5e974e7c24bf",
     #     remote = "https://github.com/bark-simulator/bark.git",
     # )
 
